@@ -9,38 +9,76 @@ import Footer from "../Component/Footer/Footer";
 import emailjs from "emailjs-com"
 import { useState } from "react";
 const Contect = () => {
+  const [mesaage, setmesaage] = useState(false)
   const [data, setdata] = useState({firstname:"",mobile:"",useremail:"",message:""})
   const [error, seterror] = useState({firstname:false,mobile:false,useremail:false,message:false})
   function getdata(e) {
     const myname=e.target.name
     const myvalue=e.target.value
-    setdata({...data,[myname]:myvalue})
-    seterror({...error,[myname]:false})
+    if (myname === "mobile" && !/^[0-9]{10}$/.test(myvalue)) {
+      seterror((prevState) => ({ ...prevState, mobile: true }));
+    } 
+    else if (myname === "useremail" && !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(myvalue)) {
+      seterror((prevState) => ({ ...prevState, useremail: true }));
+    } 
+    else {
+      setdata({ ...data, [myname]: myvalue });
+      seterror({ ...error, [myname]: false });
+    }
+  
   }
 
+// function sendEmail(e) {
+//   e.preventDefault()
+
+//   if(data.firstname==""){
+//     seterror({...error,firstname:true})
+//   }
+//   else if(data.mobile==""){
+//     seterror({...error,mobile:true})
+//   }
+//   else if(data.useremail==""){
+//     seterror({...error,useremail:true})
+//   }
+//   else if(data.message==""){
+//     seterror({...error,message:true})
+//   }
+
+//    if (data.firstname!="" && data.mobile!="" && data.useremail!="" && data.message!="") {
+//     emailjs.sendForm("service_xlp14zn","template_67lcefj",e.target,"tseDxCK7xlhfwvfCI").then(res=>{console.log(res)}).catch(err=>{console.log(err)});
+//     console.log("kndkn");
+//     console.log(data);
+
+//    }
+// }
 function sendEmail(e) {
-  e.preventDefault()
+  e.preventDefault();
 
-  if(data.firstname==""){
-    seterror({...error,firstname:true})
-  }
-  else if(data.mobile==""){
-    seterror({...error,mobile:true})
-  }
-  else if(data.useremail==""){
-    seterror({...error,useremail:true})
-  }
-  else if(data.message==""){
-    seterror({...error,message:true})
+  let hasError = false;
+
+  // Check for empty fields
+  for (const key in data) {
+    if (data[key].trim() === "") {
+      seterror((prevState) => ({ ...prevState, [key]: true }));
+      hasError = true;
+    }
   }
 
-   if (data.firstname!="" && data.mobile!="" && data.useremail!="" && data.message!="") {
-    emailjs.sendForm("service_xlp14zn","template_67lcefj",e.target,"tseDxCK7xlhfwvfCI").then(res=>{console.log(res)}).catch(err=>{console.log(err)});
+  if (!hasError) {
+    emailjs
+      .sendForm("service_xlp14zn", "template_67lcefj", e.target, "tseDxCK7xlhfwvfCI")
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
     console.log("kndkn");
     console.log(data);
-    
-   }
+setmesaage(true)
+  }
 }
+
   return (
     <>
     <Navbar />
@@ -57,6 +95,7 @@ function sendEmail(e) {
           ></iframe>
         </div>
       </div>
+      
       <div className="contacts">
         <div className="contact112">
           <div className="contact2">
@@ -104,11 +143,14 @@ function sendEmail(e) {
           <div className="contact3">
             <h5></h5>
 <div className="contact10">
+<div className="message">
+      {mesaage && <p>We contact you soon....</p>}
+      </div>
   <h1>Contact us</h1>
  <form onSubmit={sendEmail}>
  <input type="text" name="firstname" placeholder="Name *" onChange={getdata}/>
  {error.firstname && <p>Enter Your Name</p>}
-  <input type="tel" name="mobile" placeholder="Your Phone Number *" onChange={getdata}/>
+  <input type="tel" name="mobile"  maxLength={10} placeholder="Your Phone Number *" onChange={getdata}/>
 {error.mobile &&  <p>Enter Your Mobile Number</p>}
 
   <input type="email" name="useremail" placeholder="Your Email *" onChange={getdata}/>
