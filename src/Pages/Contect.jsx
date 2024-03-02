@@ -69,13 +69,17 @@ function sendEmail(e) {
       .sendForm("service_xlp14zn", "template_67lcefj", e.target, "tseDxCK7xlhfwvfCI")
       .then((res) => {
         console.log(res);
+        console.log("kndkn");
+    console.log(data);
+setmesaage(true)
+setTimeout(() => {
+  setmesaage("")
+}, 2000);
       })
       .catch((err) => {
         console.log(err);
       });
-    console.log("kndkn");
-    console.log(data);
-setmesaage(true)
+    
   }
 }
 
@@ -144,7 +148,7 @@ setmesaage(true)
             <h5></h5>
 <div className="contact10">
 <div className="message">
-      {mesaage && <p>We contact you soon....</p>}
+      {mesaage && <p>We will be in touch shortly</p>}
       </div>
   <h1>Contact us</h1>
  <form onSubmit={sendEmail}>
