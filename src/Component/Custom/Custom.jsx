@@ -23,8 +23,8 @@ const Custom = () => {
                     <img src={sampleimg} alt="" />
                 </div>
                 <div className='samplecontent'>
-                    <h1>Innovative Printing</h1>
-                    <p>Revolutionizing printing one innovation at a time</p>
+                    <h1>Innovative Designing</h1>
+                    <p>Revolutionizing designing one innovation at a time</p>
                 </div>
             </div>
             <div className='sample6'>
