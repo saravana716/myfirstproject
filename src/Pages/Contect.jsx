@@ -6,8 +6,41 @@ import { FaPhoneAlt } from "react-icons/fa";
 import logo from "../Assets/images/download.png"
 import Navbar from "../Component/Navbar";
 import Footer from "../Component/Footer/Footer";
-
+import emailjs from "emailjs-com"
+import { useState } from "react";
 const Contect = () => {
+  const [data, setdata] = useState({firstname:"",mobile:"",useremail:"",message:""})
+  const [error, seterror] = useState({firstname:false,mobile:false,useremail:false,message:false})
+  function getdata(e) {
+    const myname=e.target.name
+    const myvalue=e.target.value
+    setdata({...data,[myname]:myvalue})
+    seterror({...error,[myname]:false})
+  }
+
+function sendEmail(e) {
+  e.preventDefault()
+
+  if(data.firstname==""){
+    seterror({...error,firstname:true})
+  }
+  else if(data.mobile==""){
+    seterror({...error,mobile:true})
+  }
+  else if(data.useremail==""){
+    seterror({...error,useremail:true})
+  }
+  else if(data.message==""){
+    seterror({...error,message:true})
+  }
+
+   if (data.firstname!="" && data.mobile!="" && data.useremail!="" && data.message!="") {
+    emailjs.sendForm("service_xlp14zn","template_67lcefj",e.target,"tseDxCK7xlhfwvfCI").then(res=>{console.log(res)}).catch(err=>{console.log(err)});
+    console.log("kndkn");
+    console.log(data);
+    
+   }
+}
   return (
     <>
     <Navbar />
@@ -72,11 +105,20 @@ const Contect = () => {
             <h5></h5>
 <div className="contact10">
   <h1>Contact us</h1>
-  <input type="text" placeholder="Name *"/>
-  <input type="tel" placeholder="Your Phone Number *"/>
-  <input type="email" placeholder="Your Email *"/>
-  <textarea name="" id="" cols="30" rows="10" placeholder="Your Message Here"></textarea>
-  <button>SUBMIT</button>
+ <form onSubmit={sendEmail}>
+ <input type="text" name="firstname" placeholder="Name *" onChange={getdata}/>
+ {error.firstname && <p>Enter Your Name</p>}
+  <input type="tel" name="mobile" placeholder="Your Phone Number *" onChange={getdata}/>
+{error.mobile &&  <p>Enter Your Mobile Number</p>}
+
+  <input type="email" name="useremail" placeholder="Your Email *" onChange={getdata}/>
+{error.useremail &&  <p>Enter Your Email</p>}
+
+  <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message Here" onChange={getdata}></textarea>
+{error.message &&  <p>Enter Message here</p>}
+
+  <button type="submit">SUBMIT</button>
+ </form>
 </div>
           </div>
         </div>
