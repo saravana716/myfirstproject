@@ -10,7 +10,7 @@ import productimages6 from "./Polyboard Record.png"
 import productimages7 from "./Short Size Note.png"
 import productimages8 from "./Year Diary.png"
 import productimages9 from "../../Assets/Monthly-Calendar-Printing-in-chennai.jpg"
-import productimages10 from "../portfolio/images/product11.jpeg"
+import productimages10 from "../../Assets/writing-school-notebook-500x500.webp"
 import productimages11 from "../../Assets/img-9.jpg"
 import Navbar from '../Navbar'
 import Footer from '../Footer/Footer'
@@ -92,7 +92,7 @@ const Products = () => {
         </div>
         
         <div class="products">
-            <div class="products-img"><img src={productimages11} alt="" /></div>
+            <div class="products-img"><img src={productimages10} alt="" /></div>
             <div class="products-info">As well as Other Printing Jobs</div>
         </div>
         
