@@ -4,7 +4,7 @@ import "./Carts.css"
 import cartimg1 from "./cal.jpg"
 import cartimg2 from "./note.jpg"
 import cartimg3 from "./dia.webp"
-import cartimg4 from "../../Component/Products/Polyboard Record.png"
+import cartimg4 from "../../Assets/poster1.jpg"
 const Carts = () => {
   return (
     <>

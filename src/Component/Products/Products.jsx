@@ -9,9 +9,9 @@ import productimages5 from "./Long Size.png"
 import productimages6 from "./Polyboard Record.png"
 import productimages7 from "./Short Size Note.png"
 import productimages8 from "./Year Diary.png"
-import productimages9 from "./18 x 24 Cm School HandBook.png"
+import productimages9 from "../../Assets/Monthly-Calendar-Printing-in-chennai.jpg"
 import productimages10 from "../portfolio/images/product11.jpeg"
-import productimages11 from "../Products/last.jpg"
+import productimages11 from "../../Assets/img-9.jpg"
 import Navbar from '../Navbar'
 import Footer from '../Footer/Footer'
 const Products = () => {
@@ -62,23 +62,23 @@ const Products = () => {
             <div class="products-info">Exam Booklet 20.5 X 32.5 cm</div>
         </div>
         <div class="products">
-            <div class="products-img"><img src={productimages4} alt="" /></div>
+            <div class="products-img"><img src={productimages6} alt="" /></div>
             <div class="products-info">Record Note (PolyBoard ) 22 X 28 cm</div>
         </div>
         <div class="products">
-            <div class="products-img"><img src={productimages5} alt="" /></div>
+            <div class="products-img"><img src={productimages4} alt="" /></div>
             <div class="products-info">Record Note (Flexible) 22 X 28 cm</div>
         </div>
         <div class="products">
-            <div class="products-img"><img src={productimages6} alt="" /></div>
+            <div class="products-img"><img src={productimages} alt="" /></div>
             <div class="products-info">School Hand Book 14 X 22 cm</div>
         </div>
         <div class="products">
-            <div class="products-img"><img src={productimages7} alt="" /></div>
+            <div class="products-img"><img src={productimages1} alt="" /></div>
             <div class="products-info">School Hand Book 18 X 24 cm</div>
         </div>
         <div class="products">
-            <div class="products-img"><img src={productimages8} alt="" /></div>
+            <div class="products-img"><img src={productimages11} alt="" /></div>
             <div class="products-info">Daily Calendars (All Size)</div>
         </div>
         
@@ -87,7 +87,7 @@ const Products = () => {
             <div class="products-info">Monthly Calendars(All Size)</div>
         </div>
         <div class="products">
-            <div class="products-img"><img src={productimages10} alt="" /></div>
+            <div class="products-img"><img src={productimages8} alt="" /></div>
             <div class="products-info">Year Diary (All Size)</div>
         </div>
         

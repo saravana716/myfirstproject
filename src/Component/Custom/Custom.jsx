@@ -1,7 +1,7 @@
 import React from 'react'
 import sampleimg from "../../Component/Products/Year Diary.png"
 import sampleimg1 from "../Carts/i2.png"
-import sampleimg2 from "../../Component/Products/Short Size Note.png"
+import sampleimg2 from "../../Assets/poster2.jpeg"
 import sampleimg3 from "../Carts/i4.jpg"
 import { BsSendFill } from "react-icons/bs";
 import "./Custom.css"

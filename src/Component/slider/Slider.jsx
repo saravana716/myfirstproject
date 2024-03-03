@@ -1,8 +1,8 @@
 import React from 'react'
-import sliderimg from "../../Assets/images/IMG-20240207-WA0048.jpg"
-import sliderimg1 from "../../Assets/images/IMG-20240207-WA0037.jpg"
-import sliderimg2 from "../../Assets/images/IMG-20240207-WA0041.jpg"
-import sliderimg3 from "../../Assets/images/IMG-20240207-WA0023.jpg"
+import sliderimg from "../../Assets/sll1.jpg"
+import sliderimg1 from "../../Assets/sl2.jpg"
+import sliderimg2 from "../../Assets/sll3.jpg"
+import sliderimg3 from "../../Assets/sl4.jpg"
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { useRef, useState } from 'react';

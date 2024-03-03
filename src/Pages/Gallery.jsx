@@ -27,7 +27,10 @@ import aboutimages104 from "../Component/aboutslider/VID-20240207-WA0009.mp4"
 import aboutimages105 from "../Component/aboutslider/VID-20240207-WA0007.mp4"
 import aboutimages106 from "../Component/aboutslider/VID-20240207-WA0005.mp4"
 import aboutimages107 from "../Component/aboutslider/VID-20240207-WA0004.mp4"
-
+import aboutimages120 from "../Component/aboutslider/two.mp4"
+import aboutimages108 from "../Assets/sll1.jpg"
+import aboutimages109 from "../Assets/sll3.jpg"
+import aboutimages110 from "../Assets/WhatsApp Image 2024-03-03 at 19.56.45_6906e45d.jpg"
 const Gallery = () => {
   return (
     <>
@@ -40,10 +43,10 @@ const Gallery = () => {
     <div className='profileimg2'>
         <div className='profileimg3'>
             <div className='profileimg4'>
-            <img src={proimg1} alt="" />
+            <img src={aboutimages108} alt="" />
             </div>
             <div className='profileimg4'>
-            <img src={proimg2} alt="" />
+            <img src={aboutimages109} alt="" />
             </div>
             <div className='profileimg4'>
             <img src={proimg3} alt="" />
@@ -52,8 +55,22 @@ const Gallery = () => {
             <img src={proimg4} alt="" />
             </div>
             <div className='profileimg4'>
-            <img src={proimg5} alt="" />
+            <img src={aboutimages110} alt="" />
             </div>
+            <div className='profileimg4'>
+            <img src={proimg17} alt="" />
+            </div>
+            <div className='profileimg4'>
+            <img src={proimg18} alt="" />
+            </div>
+        <div className='profileimg4'><video src={aboutimages120}  loop muted autoPlay  /></div>
+        <div className='profileimg4'><video src={aboutimages101}  loop muted autoPlay  /></div>
+       <div className='profileimg4'><video src={aboutimages102}  loop muted autoPlay  /></div>
+        <div className='profileimg4'><video src={aboutimages103}  loop muted autoPlay  /></div>
+       <div className='profileimg4'><video src={aboutimages104}  loop muted autoPlay  /></div>
+      <div className='profileimg4'><video src={aboutimages105}  loop muted autoPlay  /></div>
+       <div className='profileimg4'><video src={aboutimages106}  loop muted autoPlay  /></div>
+        <div className='profileimg4'><video src={aboutimages107}  loop muted autoPlay  /></div>
             <div className='profileimg4'>
             <img src={proimg6} alt="" />
             </div>
@@ -93,20 +110,9 @@ const Gallery = () => {
             <div className='profileimg4'>
             <img src={proimg16} alt="" />
             </div>
-            <div className='profileimg4'>
-            <img src={proimg17} alt="" />
-            </div>
-            <div className='profileimg4'>
-            <img src={proimg18} alt="" />
-            </div>
            
-        <div className='profileimg4'><video src={aboutimages101}  loop muted autoPlay  /></div>
-       <div className='profileimg4'><video src={aboutimages102}  loop muted autoPlay  /></div>
-        <div className='profileimg4'><video src={aboutimages103}  loop muted autoPlay  /></div>
-       <div className='profileimg4'><video src={aboutimages104}  loop muted autoPlay  /></div>
-      <div className='profileimg4'><video src={aboutimages105}  loop muted autoPlay  /></div>
-       <div className='profileimg4'><video src={aboutimages106}  loop muted autoPlay  /></div>
-        <div className='profileimg4'><video src={aboutimages107}  loop muted autoPlay  /></div>
+           
+        
             
         </div>
     </div>
