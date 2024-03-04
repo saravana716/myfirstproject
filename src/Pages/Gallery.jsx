@@ -3,7 +3,6 @@ import "./Gallery.css"
 import proimg1 from "../Component/aboutslider/IMG-20240207-WA0008.jpg"
 import proimg2 from "../Component/aboutslider/IMG-20240207-WA0009.jpg"
 import proimg3 from "../Component/aboutslider/IMG-20240207-WA0010.jpg"
-import proimg4 from "../Component/aboutslider/IMG-20240207-WA0012.jpg"
 import proimg5 from "../Component/aboutslider/IMG-20240207-WA0016.jpg"
 import proimg6 from "../Component/aboutslider/IMG-20240207-WA0019.jpg"
 import proimg7 from "../Component/aboutslider/IMG-20240207-WA0022.jpg"
@@ -27,6 +26,7 @@ import aboutimages104 from "../Component/aboutslider/VID-20240207-WA0009.mp4"
 import aboutimages105 from "../Component/aboutslider/VID-20240207-WA0007.mp4"
 import aboutimages106 from "../Component/aboutslider/VID-20240207-WA0005.mp4"
 import aboutimages107 from "../Component/aboutslider/VID-20240207-WA0004.mp4"
+import aboutimages130 from "../Component/aboutslider/videos.mp4"
 import aboutimages120 from "../Component/aboutslider/two.mp4"
 import aboutimages108 from "../Assets/sll1.jpg"
 import aboutimages109 from "../Assets/sll3.jpg"
@@ -52,7 +52,7 @@ const Gallery = () => {
             <img src={proimg3} alt="" />
             </div>
             <div className='profileimg4'>
-            <img src={proimg4} alt="" />
+            <img src={aboutimages130} alt="" />
             </div>
             <div className='profileimg4'>
             <img src={aboutimages110} alt="" />
@@ -109,6 +109,9 @@ const Gallery = () => {
             </div>
             <div className='profileimg4'>
             <img src={proimg16} alt="" />
+            </div>
+            <div className='profileimg4'>
+            <img src={aboutimages130} alt="" />
             </div>
            
            

@@ -1,7 +1,7 @@
 import React from 'react'
 import "./product.css"
 import productimages from "./14 x 22 School HandBook.png"
-import productimages1 from "./18 x 24 Cm School HandBook.png"
+import productimages1 from "./Long Size.png"
 import productimages2 from "./Crown Size.png"
 import productimages3 from "./Exam Booklet.png"
 import productimages4 from "./Flexible Record Note.png"
