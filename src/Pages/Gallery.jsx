@@ -51,9 +51,8 @@ const Gallery = () => {
             <div className='profileimg4'>
             <img src={proimg3} alt="" />
             </div>
-            <div className='profileimg4'>
-            <img src={aboutimages130} alt="" />
-            </div>
+        <div className='profileimg4'><video src={aboutimages130}  loop muted autoPlay  /></div>
+            
             <div className='profileimg4'>
             <img src={aboutimages110} alt="" />
             </div>
@@ -110,10 +109,7 @@ const Gallery = () => {
             <div className='profileimg4'>
             <img src={proimg16} alt="" />
             </div>
-            <div className='profileimg4'>
-            <img src={aboutimages130} alt="" />
-            </div>
-           
+          
            
         
             
